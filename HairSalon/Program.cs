@@ -15,7 +15,7 @@ public class Program
     {
         WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
         builder.Services.AddControllersWithViews();
-        builder.Services.AddDbContext<RestaurantListContext>(
+        builder.Services.AddDbContext<HairSalonContext>(
             dbContextOptions => dbContextOptions.UseMySql(
                 builder.Configuration["ConnectionStrings:DefaultConnection"],
                 ServerVersion.AutoDetect(builder.Configuration["ConnectionStrings:DefaultConnection"])

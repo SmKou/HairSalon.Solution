@@ -1,0 +1,26 @@
+@{
+    Layout = "_Layout";
+}
+
+@model HairSalon.Models.Specialty
+
+<header>
+    <h1>Add Specialty</h1>
+</header>
+<main>
+    @using (Html.BeginForm())
+    {
+        <div class="form-entry">
+            @Html.LabelFor(model => model.Name)
+            @Html.EditorFor(model => model.Name)
+        </div>
+    
+        <input type="submit" value="Add Specialty">
+    }
+</main>
+<footer>
+    <ul class="nav">
+        <li>@Html.ActionLink("Specialties", "Index")</li>
+        <li>@Html.ActionLink("Stylists", "Index", "Home")</li>
+    </ul>
+</footer>

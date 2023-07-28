@@ -1,0 +1,35 @@
+@{
+    Layout = "_Layout";
+}
+
+@using HairSalon.Models;
+
+<header>
+    <h1>Eau Claire's Salon</h1>
+</header>
+<main>
+    <h3>Stylists</h3>
+    @if (Model.Count == 0)
+    {
+        <p>No stylists have been added yet.</p>
+        <p>@Html.ActionLink("Add Stylist", "Create", "Stylists")</p>
+    }
+
+    <ul>
+        @foreach (Stylist stylist in Model)
+        {
+            <li>
+                <div>@Html.ActionLink($"{stylist.Specialty.Name}", "Index", "Specialties")</div>
+                <div>@Html.ActionLink($"{stylist.Name}", "Details", "Stylists", new { id = stylist.StylistId })</div>
+                <div>@Html.ActionLink("Delete", "Delete", "Stylists")</div>
+            </li>
+        }
+    </ul>
+</main>
+<footer>
+    <ul class="nav">
+        <li>@Html.ActionLink("Specialties", "Index", "Specialties")</li>
+        <li>@Html.ActionLink("Add Specialty", "Create", "Specialties")</li>
+        <li>@Html.ActionLink("Add Stylist", "Create", "Stylists")</li>
+    </ul>
+</footer>
