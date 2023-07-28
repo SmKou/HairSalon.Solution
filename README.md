@@ -17,7 +17,7 @@ Eau Claire's Salon is an MVC web app for managing stylists with specific special
 - Select a stylist, see details and list of all clients for stylist
 - Add new stylist
 - Add client to specific stylist
-  - Cannot add clients if not stylists have been added
+  - Cannot add clients if no stylists have been added
 
 ### In Consideration
 
@@ -36,6 +36,12 @@ Eau Claire's Salon is an MVC web app for managing stylists with specific special
 This app requires use of a database.
 
 ## Database Schemas
+
+**Initial Database Schema**
+
+![Initial Database](./HairSalon.png)
+
+To setup the database, you can either follow the directions in [Database](#database) or import the sql file provided in this project's root folder: [Database Schema](./stella_marie.sql).
 
 ## Database
 
