@@ -10,6 +10,7 @@
     --dark-tan: #CE7E4D;
     --tan: #F0CFBE;
     --beige: #F7EFE3;
+    --white: #FFF7EA;
 }
 
 html {
@@ -21,7 +22,7 @@ html {
 body {
     position: relative;
     margin: 0;
-    background: var(--beige);
+    background: var(--white);
 }
 
 a {
@@ -39,6 +40,7 @@ header {
     background: var(--blush);
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 h1 {
@@ -130,39 +132,27 @@ main a:hover {
 .listings li div {
     height: 32px;
     padding: 7px;
-    border-top: 2px solid transparent;
-    border-bottom: 2px solid transparent;
     display: flex;
     justify-content: center;
-}
-
-.listings li div:hover {
-    border-top-color: var(--dark-green);
-    border-bottom-color: var(--dark-green);
 }
 
 .list-3-left li div,
 .list-3-left li div a,
 .list-3-mid li div,
 .list-3-mid li div a {
-    color: var(--dark-green);
+    color: var(--dark-tan);
 }
 
 .list-3-left li div:first-of-type,
+.list-3-mid li div:first-of-type,
 .list-3-mid li div:nth-of-type(2) {
-    border-top-color: var(--tan);
-    border-bottom-color: var(--tan);
     color: var(--dark-tan);
-    background: var(--tan);
     justify-content: flex-start;
-}
+} 
 
-.list-3-mid li div:first-of-type {
-    border-top-color: var(--blush);
-    border-bottom-color: var(--blush);
-    color: var(--dark-blush);
-    background: var(--blush);
-    justify-content: flex-start;
+.listings li div:hover {
+    background: var(--tan);
+    cursor: pointer;
 }
 
 form {
@@ -175,7 +165,6 @@ form {
 
 .form-entry {
     width: 100%;
-    margin: 12px 0;
     display: grid;
     grid-template-columns: 128px 1fr;
 }
@@ -198,6 +187,18 @@ form {
 input[type=submit] {
     margin: 24px auto;
     padding: 12px 24px;
+    border: 2px solid var(--tan);
+    border-radius: 12px;
+    outline: 0;
+    color: var(--tan);
+    background: transparent;
     font-family: 'Montserrat';
     font-size: 18px;
+}
+
+input[type=submit]:hover {
+    border-color: var(--dark-tan);
+    color: var(--dark-tan);
+    background: var(--tan);
+    cursor: pointer;
 }

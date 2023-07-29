@@ -2,18 +2,33 @@
     Layout = "_Layout";
 }
 
+@using HairSalon.Models;
 @model HairSalon.Models.Client
 
 <header>
     <h1>Edit Client: @Model.Name</h1>
+    <ul class="nav">
+        <li>@Html.ActionLink("Clients", "Details", "Stylists", new { id = Model.StylistId })</li>
+    </ul>
 </header>
-<main></main>
+<main>
+    @using (Html.BeginForm())
+    {
+        @Html.HiddenFor(model => model.StylistId)
+
+        <div class="form-entry">
+            @Html.LabelFor(model => model.Name)
+            @Html.EditorFor(model => model.Name)
+        </div>
+
+        <input type="submit" value="Save">
+    }
+</main>
 <footer>
     <ul class="nav">
         <li>@Html.ActionLink("Specialties", "Index", "Specialties")</li>
         <li>@Html.ActionLink("Add Specialty", "Create", "Specialties")</li>
         <li>@Html.ActionLink("Stylists", "Index", "Home")</li>
         <li>@Html.ActionLink("Add Stylist", "Create", "Stylists")</li>
-        <li>@Html.ActionLink("Clients", "Details", "Stylists", new { id = Model.Stylist.StylistId })</li>
     </ul>
 </footer>

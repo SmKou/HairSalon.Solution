@@ -6,16 +6,22 @@
 
 <header>
     <h1>View Client: Model.Name</h1>
+    <ul class="nav">
+        <li>@Html.ActionLink("Clients", "Details", "Stylists", new { id = Model.Stylist.StylistId })</li>
+        <li>@Html.ActionLink("Edit", "Edit", new { id = Model.ClientId })</li>
+        <li>@Html.ActionLink("Delete", "Delete", new { id = Model.ClientId })</li>
+    </ul>
 </header>
-<main></main>
+<main>
+    <h3>@Model.Name</h3>
+    <p>No other information available.</p>
+    <p>Stylist: @Model.Stylist.Name</p>
+</main>
 <footer>
     <ul class="nav">
         <li>@Html.ActionLink("Specialties", "Index", "Specialties")</li>
         <li>@Html.ActionLink("Add Specialty", "Create", "Specialties")</li>
         <li>@Html.ActionLink("Stylists", "Index", "Home")</li>
         <li>@Html.ActionLink("Add Stylist", "Create", "Stylists")</li>
-        <li>@Html.ActionLink("Clients", "Details", "Stylists", new { id = Model.Stylist.StylistId })</li>
-        <li>@Html.ActionLink("Edit", "Edit", new { id = Model.ClientId })</li>
-        <li>@Html.ActionLink("Delete", "Delete", new { id = Model.ClientId })</li>
     </ul>
 </footer>

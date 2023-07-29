@@ -26,6 +26,8 @@ public class SpecialtiesController : Controller
     [HttpPost]
     public ActionResult Create(Specialty specialty)
     {
+        if (_db.Specialties.Any(other => other.Name == specialty.Name))
+            return RedirectToAction("Create");
         _db.Specialties.Add(specialty);
         _db.SaveChanges();
         return RedirectToAction("Index");

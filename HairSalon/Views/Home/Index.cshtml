@@ -6,6 +6,9 @@
 
 <header>
     <h1>Eau Claire's Salon</h1>
+    <ul class="nav">
+        <li>@Html.ActionLink("Add Stylist", "Create", "Stylists")</li>
+    </ul>
 </header>
 <main>
     <h3>Stylists</h3>
@@ -30,6 +33,5 @@
     <ul class="nav">
         <li>@Html.ActionLink("Specialties", "Index", "Specialties")</li>
         <li>@Html.ActionLink("Add Specialty", "Create", "Specialties")</li>
-        <li>@Html.ActionLink("Add Stylist", "Create", "Stylists")</li>
     </ul>
 </footer>

@@ -6,6 +6,9 @@
 
 <header>
     <h1>Specialties</h1>
+    <ul class="nav">
+        <li>@Html.ActionLink("Add Specialty", "Create")</li>
+    </ul>
 </header>
 <main>
     @if (@Model.Count == 0)
@@ -27,7 +30,6 @@
 </main>
 <footer>
     <ul class="nav">
-        <li>@Html.ActionLink("Add Specialty", "Create")</li>
         <li>@Html.ActionLink("Stylists", "Index", "Home")</li>
         <li>@Html.ActionLink("Add Stylist", "Create", "Stylists")</li>
     </ul>

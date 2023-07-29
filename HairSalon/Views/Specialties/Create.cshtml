@@ -6,6 +6,9 @@
 
 <header>
     <h1>Add Specialty</h1>
+    <ul class="nav">
+        <li>@Html.ActionLink("Specialties", "Index")</li>
+    </ul>
 </header>
 <main>
     @using (Html.BeginForm())
@@ -20,7 +23,6 @@
 </main>
 <footer>
     <ul class="nav">
-        <li>@Html.ActionLink("Specialties", "Index")</li>
         <li>@Html.ActionLink("Stylists", "Index", "Home")</li>
     </ul>
 </footer>
