@@ -116,11 +116,15 @@ main a:hover {
 
 .listings li {
     width: 100%;
+    display: grid;
 }
 
-.list-3 li {
-    display: grid;
+.list-3-left li {
     grid-template-columns: 1fr 66px 90px;
+}
+
+.list-3-mid li {
+    grid-template-columns: 240px 1fr 90px;
 }
 
 .listings li div {
@@ -137,16 +141,27 @@ main a:hover {
     border-bottom-color: var(--dark-green);
 }
 
-.listings li div,
-.listings li div a {
+.list-3-left li div,
+.list-3-left li div a,
+.list-3-mid li div,
+.list-3-mid li div a {
     color: var(--dark-green);
 }
 
-.listings li div:first-of-type {
+.list-3-left li div:first-of-type,
+.list-3-mid li div:nth-of-type(2) {
     border-top-color: var(--tan);
     border-bottom-color: var(--tan);
     color: var(--dark-tan);
     background: var(--tan);
+    justify-content: flex-start;
+}
+
+.list-3-mid li div:first-of-type {
+    border-top-color: var(--blush);
+    border-bottom-color: var(--blush);
+    color: var(--dark-blush);
+    background: var(--blush);
     justify-content: flex-start;
 }
 
@@ -160,6 +175,7 @@ form {
 
 .form-entry {
     width: 100%;
+    margin: 12px 0;
     display: grid;
     grid-template-columns: 128px 1fr;
 }
