@@ -5,7 +5,7 @@
 @model HairSalon.Models.Client
 
 <header>
-    <h1>View Client: Model.Name</h1>
+    <h1>View Client: @Model.Name</h1>
     <ul class="nav">
         <li>@Html.ActionLink("Clients", "Details", "Stylists", new { id = Model.Stylist.StylistId })</li>
         <li>@Html.ActionLink("Edit", "Edit", new { id = Model.ClientId })</li>

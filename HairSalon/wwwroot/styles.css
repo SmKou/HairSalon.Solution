@@ -22,7 +22,7 @@ html {
 body {
     position: relative;
     margin: 0;
-    background: var(--white);
+    background: white;
 }
 
 a {
@@ -151,7 +151,7 @@ main a:hover {
 } 
 
 .listings li div:hover {
-    background: var(--tan);
+    background: var(--beige);
     cursor: pointer;
 }
 

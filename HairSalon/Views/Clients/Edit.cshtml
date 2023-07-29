@@ -14,11 +14,14 @@
 <main>
     @using (Html.BeginForm())
     {
-        @Html.HiddenFor(model => model.StylistId)
-
         <div class="form-entry">
             @Html.LabelFor(model => model.Name)
             @Html.EditorFor(model => model.Name)
+        </div>
+
+        <div class="form-entry">
+            @Html.LabelFor(model => model.StylistId)
+            @Html.DropDownList("StylistId")
         </div>
 
         <input type="submit" value="Save">
