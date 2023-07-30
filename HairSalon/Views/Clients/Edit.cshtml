@@ -16,13 +16,15 @@
 <main>
     @using (Html.BeginForm())
     {
+        @Html.HiddenFor(model => model.ClientId)
+
         <div class="form-entry">
             @Html.LabelFor(model => model.Name)
             @Html.EditorFor(model => model.Name)
         </div>
 
         <div class="form-entry">
-            @Html.LabelFor(model => model.StylistId)
+            @Html.LabelFor(model => model.Stylist)
             @Html.DropDownList("StylistId")
         </div>
 

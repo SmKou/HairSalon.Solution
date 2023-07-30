@@ -45,7 +45,7 @@ public class StylistsController : Controller
     {
         _db.Stylists.Update(stylist);
         _db.SaveChanges();
-        return RedirectToAction("Details", new { id = stylist.StylistId });
+        return RedirectToAction("Index", "Home");
     }
 
     public ActionResult Delete(int id)
