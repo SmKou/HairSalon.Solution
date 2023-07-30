@@ -7,6 +7,8 @@
 <header>
     <h1>Add Client</h1>
     <ul class="nav">
+        <li>@Html.ActionLink("Stylists", "Index", "Home")</li>
+        <li>@Html.ActionLink("Add Stylist", "Create", "Stylists")</li>
         <li>@Html.ActionLink("Clients", "Details", "Stylists", new { id = ViewBag.StylistId })</li>
     </ul>
 </header>
@@ -23,11 +25,3 @@
         <input type="submit" value="Add Client">
     }
 </main>
-<footer>
-    <ul class="nav">
-        <li>@Html.ActionLink("Specialties", "Index", "Specialties")</li>
-        <li>@Html.ActionLink("Add Specialty", "Create", "Specialties")</li>
-        <li>@Html.ActionLink("Stylists", "Index", "Home")</li>
-        <li>@Html.ActionLink("Add Stylist", "Create", "Stylists")</li>
-    </ul>
-</footer>

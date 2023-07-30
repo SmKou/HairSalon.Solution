@@ -45,9 +45,9 @@ public class ClientsController : Controller
     [HttpPost]
     public ActionResult Edit(Client client)
     {
-        if (client.StylistId == 0
-            || _db.Clients.Any(other => other.Name == client.Name))
+        if (client.StylistId == 0)
             return RedirectToAction("Edit", new { id = client.ClientId });
+
         _db.Clients.Update(client);
         _db.SaveChanges();
         return RedirectToAction("Details", "Stylists", new { id = client.StylistId });

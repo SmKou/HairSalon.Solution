@@ -18,20 +18,14 @@
         <p>@Html.ActionLink("Add Stylist", "Create", "Stylists")</p>
     }
 
-    <ul class="listings list-3-mid">
+    <ul class="listings list-3-left">
         @foreach (Stylist stylist in Model)
         {
             <li>
-                <div>@Html.ActionLink($"{stylist.Specialty.Name}", "Index", "Specialties")</div>
                 <div>@Html.ActionLink($"{stylist.Name}", "Details", "Stylists", new { id = stylist.StylistId })</div>
+                <div>@Html.ActionLink("Edit", "Edit", "Stylists", new { id = stylist.StylistId })</div>
                 <div>@Html.ActionLink("Delete", "Delete", "Stylists", new { id = stylist.StylistId })</div>
             </li>
         }
     </ul>
 </main>
-<footer>
-    <ul class="nav">
-        <li>@Html.ActionLink("Specialties", "Index", "Specialties")</li>
-        <li>@Html.ActionLink("Add Specialty", "Create", "Specialties")</li>
-    </ul>
-</footer>

@@ -14,7 +14,6 @@ public class HomeController : Controller
     public ActionResult Index()
     {
         List<Stylist> model = _db.Stylists
-            .Include(stylist => stylist.Specialty)
             .ToList();
         return View(model);
     }

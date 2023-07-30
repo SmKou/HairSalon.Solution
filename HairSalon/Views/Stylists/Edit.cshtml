@@ -10,6 +10,7 @@
         <li>@Html.ActionLink("Stylists", "Index", "Home")</li>
         <li>@Html.ActionLink("Add Stylist", "Create")</li>
         <li>@Html.ActionLink("Delete", "Delete", new { id = Model.StylistId })</li>
+        <li>@Html.ActionLink("Clients", "Details", new { id = Model.StylistId })</li>
     </ul>
 </header>
 <main>
@@ -22,18 +23,6 @@
             @Html.EditorFor(model => model.Name)
         </div>
 
-        <div class="form-entry">
-            @Html.LabelFor(model => model.SpecialtyId)
-            @Html.DropDownList("SpecialtyId")
-        </div>
-
         <input type="submit" value="Save">
     }
 </main>
-<footer>
-    <ul class="nav">
-        <li>@Html.ActionLink("Specialties", "Index", "Specialties")</li>
-        <li>@Html.ActionLink("Add Specialty", "Create", "Specialties")</li>
-        <li>@Html.ActionLink("Clients", "Details", new { id = Model.StylistId })</li>
-    </ul>
-</footer>
